@@ -1,0 +1,146 @@
+/* Main site styles for the Binturong Explorer project */
+
+body {
+  margin: 0;
+  background: #f3efe3;
+  color: #2c332d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header[role="banner"] {
+  background: #294c3a;
+  color: #ffffff;
+  padding: 28px 8% 18px;
+  border-bottom: 6px solid #c98a2e;
+}
+
+header[role="banner"] h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin: 4px 0 20px;
+  color: #e7eadf;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #f3efe3;
+  color: #294c3a;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #c98a2e;
+  color: #ffffff;
+}
+
+main {
+  width: 84%;
+  max-width: 960px;
+  margin: 32px auto;
+}
+
+article {
+  background: #ffffff;
+  padding: 28px 34px;
+  border: 1px solid #d7d1c2;
+}
+
+.page-intro {
+  border-bottom: 2px solid #d7d1c2;
+  margin-bottom: 24px;
+}
+
+.page-intro h2 {
+  color: #294c3a;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+section {
+  margin: 30px 0;
+}
+
+section h3,
+aside h3 {
+  color: #3f674f;
+  margin-bottom: 8px;
+}
+
+.fact-list {
+  padding-left: 22px;
+}
+
+.side-note {
+  background: #eef3e8;
+  border: 1px solid #b9c8b6;
+  padding: 16px 20px;
+  margin: 28px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  border: 1px solid #b9b3a5;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  width: 30%;
+  background: #eef3e8;
+  color: #294c3a;
+}
+
+a {
+  color: #2f5f46;
+}
+
+a:hover,
+a:focus {
+  color: #8a5719;
+}
+
+footer[role="contentinfo"] {
+  margin-top: 40px;
+  padding: 18px 8%;
+  background: #1f392d;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.content-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}

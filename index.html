@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Binturongs | Home</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
 
-</body>
+    <!-- MDN unique element: <style> creates internal CSS. It is in this page's head and is used only to style the featured fact box on the homepage. -->
+    <style>
+      .featured-fact {
+        border-left: 5px solid #c98a2e;
+        background: #fff7e8;
+        padding: 1rem 1.25rem;
+        margin: 1.5rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+      <h1>Binturong Explorer</h1>
+      <p class="tagline">Meet the strange, shaggy, popcorn-scented bearcat.</p>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html" title="Binturong homepage">Home</a></li>
+          <li><a href="appearance.html" title="Binturong appearance and adaptations">Appearance</a></li>
+          <li><a href="habitat.html" title="Binturong habitat, behavior, and diet">Habitat &amp; Diet</a></li>
+          <li><a href="conservation.html" title="Binturong conservation and threats">Conservation</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article role="article">
+        <header class="page-intro">
+          <h2>What is a binturong?</h2>
+          <img src="images/binturong-main.jpg" alt="A binturong along a branch" class="content-image"/>
+          <p>
+            The binturong (<i>Arctictis binturong</i>) is a tree-dwelling mammal
+            native to South and Southeast Asia. It is sometimes called a
+            <b>bearcat</b>, even though it is not a bear or a cat. Binturongs
+            belong to the Viverridae family, which also includes civets.
+          </p>
+        </header>
+
+        <section>
+          <h3>Why they stand out</h3>
+          <p>
+            Binturongs have long, shaggy coats, large whiskers, rounded ears,
+            and a strong prehensile tail that helps them move through trees.
+            They are also famous for a scent that many people compare to
+            buttered popcorn.
+          </p>
+          <p>
+            Although they are members of the order Carnivora, fruit makes up a
+            large part of their diet. By eating fruit and spreading seeds,
+            binturongs can help support the forests where they live.
+          </p>
+        </section>
+
+        <!-- MDN unique attributes: aria-labelledby names this section using its heading, and aria-describedby connects it to the short introduction below. -->
+        <section aria-labelledby="quick-facts-heading" aria-describedby="quick-facts-intro">
+          <h3 id="quick-facts-heading">Quick facts</h3>
+          <p id="quick-facts-intro">A few basics to know before exploring the rest of the site.</p>
+          <ul class="fact-list">
+            <li><b>Scientific name:</b> <i>Arctictis binturong</i></li>
+            <li><b>Family:</b> Viverridae</li>
+            <li><b>Range:</b> South and Southeast Asia</li>
+            <li><b>Lifestyle:</b> Mostly arboreal and mostly active at night</li>
+            <li><b>Diet:</b> Mainly fruit, plus some small animals, eggs, and other foods</li>
+          </ul>
+        </section>
+
+        <section class="featured-fact">
+          <h3>
+            <!-- MDN unique attribute: aria-hidden hides this decorative symbol from screen readers because it adds no meaning. -->
+            <span aria-hidden="true">★</span>
+            Featured fact
+          </h3>
+          <p id="featured-fact-text">Binturongs use scent to communicate with other binturongs.</p>
+
+          <!-- MDN unique element: <noscript> shows fallback content when JavaScript is unavailable. It is located under the featured fact and explains that the rotating fact feature will not run. -->
+          <noscript>
+            <p>The rotating fact feature requires JavaScript, but the rest of the site works normally without it.</p>
+          </noscript>
+        </section>
+
+        <section>
+          <h3>Explore the site</h3>
+          <p>
+            Use the navigation above to learn about binturong appearance and
+            adaptations, their forest habitat and diet, and the conservation
+            challenges they face in the wild.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer role="contentinfo">
+      <p>Binturong Explorer &mdash; COMP 484 Project 1</p>
+    </footer>
+
+    <!-- MDN unique element: <script> contains JavaScript. It is located at the end of the body and is used to display one random binturong fact in the featured fact box. -->
+    <script>
+      const facts = [
+        "Binturongs are sometimes called bearcats, but they are neither bears nor cats.",
+        "A binturong's prehensile tail can grip branches and help it climb.",
+        "Binturongs are known for a scent that is often compared to buttered popcorn.",
+        "Fruit is an important part of a binturong's diet, and they help spread seeds through forests."
+      ];
+
+      const factText = document.getElementById("featured-fact-text");
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      factText.textContent = randomFact;
+    </script>
+  </body>
 </html>
